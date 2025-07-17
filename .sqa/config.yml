@@ -1,0 +1,64 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cerfacs-globc/idownscale:
+      branch: master
+      repo: https://github.com/cerfacs-globc/idownscale.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cerfacs-globc/idownscale git:
+        commands:
+        - /usr/bin/env sh .sqa/script.boozy-ultramarine-numbat.sh
+        container: qc.acc_beady-bistre-coati
+  QC.Doc:
+    repos:
+      github.com/cerfacs-globc/idownscale find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-denim-dog.sh
+        container: qc.doc_tasty-turquoise-tortoise
+      github.com/cerfacs-globc/idownscale git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gummy-xanthic-dragon.sh
+        container: qc.doc_squeaky-azure-dalmatian
+      github.com/cerfacs-globc/idownscale markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sunny-cardinal-eleuth.sh
+        container: qc.doc_baggy-olivine-otter
+  QC.Lic:
+    repos:
+      github.com/cerfacs-globc/idownscale licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.scaly-amethyst-gecko.sh
+        container: qc.lic_sleepy-buff-axolotl
+  QC.Sec:
+    repos:
+      github.com/cerfacs-globc/idownscale bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-orange-oriole.sh
+        container: qc.sec_muzzy-champagne-fossa
+  QC.Sty:
+    repos:
+      github.com/cerfacs-globc/idownscale flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.slaphappy-razzmatazz-iguana.sh
+        container: qc.sty_smelly-burgundy-lionfish
+  QC.Uni:
+    repos:
+      github.com/cerfacs-globc/idownscale pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.snazzy-turquoise-paradise.sh
+        container: qc.uni_paltry-burgundy-cockroach
+  QC.Ver:
+    repos:
+      github.com/cerfacs-globc/idownscale get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.slimy-russet-barb.sh
+        container: qc.ver_blurry-champagne-chameleon
+timeout: 5400
