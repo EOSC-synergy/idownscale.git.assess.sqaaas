@@ -15,50 +15,50 @@ sqa_criteria:
     repos:
       github.com/cerfacs-globc/idownscale git:
         commands:
-        - /usr/bin/env sh .sqa/script.boozy-ultramarine-numbat.sh
-        container: qc.acc_beady-bistre-coati
+        - /usr/bin/env sh .sqa/script.tasty-sapphire-yak.sh
+        container: qc.acc_smelly-magnolia-tarantula
   QC.Doc:
     repos:
       github.com/cerfacs-globc/idownscale find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-denim-dog.sh
-        container: qc.doc_tasty-turquoise-tortoise
+        - /usr/bin/env sh .sqa/script.randy-fuchsia-zonkey.sh
+        container: qc.doc_tacky-razzmatazz-donkey
       github.com/cerfacs-globc/idownscale git:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-xanthic-dragon.sh
-        container: qc.doc_squeaky-azure-dalmatian
+        - /usr/bin/env sh .sqa/script.shaky-cardinal-oriole.sh
+        container: qc.doc_nippy-orange-lion
       github.com/cerfacs-globc/idownscale markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-cardinal-eleuth.sh
-        container: qc.doc_baggy-olivine-otter
+        - /usr/bin/env sh .sqa/script.wheezy-magnolia-devil.sh
+        container: qc.doc_stinky-viridian-urchin
   QC.Lic:
     repos:
       github.com/cerfacs-globc/idownscale licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-amethyst-gecko.sh
-        container: qc.lic_sleepy-buff-axolotl
+        - /usr/bin/env sh .sqa/script.shaky-amaranth-centipede.sh
+        container: qc.lic_gamy-mustard-vulture
   QC.Sec:
     repos:
       github.com/cerfacs-globc/idownscale bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.silly-orange-oriole.sh
-        container: qc.sec_muzzy-champagne-fossa
+        - /usr/bin/env sh .sqa/script.muzzy-jade-frise.sh
+        container: qc.sec_snoopy-amber-coral
   QC.Sty:
     repos:
       github.com/cerfacs-globc/idownscale flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-razzmatazz-iguana.sh
-        container: qc.sty_smelly-burgundy-lionfish
+        - /usr/bin/env sh .sqa/script.snoopy-aquamarine-nightingale.sh
+        container: qc.sty_paltry-chocolate-corgi
   QC.Uni:
     repos:
       github.com/cerfacs-globc/idownscale pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.snazzy-turquoise-paradise.sh
-        container: qc.uni_paltry-burgundy-cockroach
+        - /usr/bin/env sh .sqa/script.wimpy-charcoal-moose.sh
+        container: qc.uni_homey-crimson-rat
   QC.Ver:
     repos:
       github.com/cerfacs-globc/idownscale get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-russet-barb.sh
-        container: qc.ver_blurry-champagne-chameleon
+        - /usr/bin/env sh .sqa/script.stinky-cinnabar-tarantula.sh
+        container: qc.ver_bumpy-amaranth-bobcat
 timeout: 5400
